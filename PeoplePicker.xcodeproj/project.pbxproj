@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32B806CB192EA292005ADF5D /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B806CA192EA292005ADF5D /* AppDelegate.h */; };
+		32B806CF192EA292005ADF5D /* AAPLPersonPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B806CE192EA292005ADF5D /* AAPLPersonPickerViewController.h */; };
+		32B806D8192EA292005ADF5D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B806D6192EA292005ADF5D /* Main_iPhone.storyboard */; };
+		32B806DD192EA292005ADF5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B806DC192EA292005ADF5D /* Images.xcassets */; };
+		32B806F5192EC812005ADF5D /* AAPLEmailPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B806F3192EC812005ADF5D /* AAPLEmailPickerViewController.h */; };
+		32B806FB192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B806F7192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.h */; };
+		32B806FD192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B806F9192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.h */; };
+		32B80700193030FC005ADF5D /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 32B806FF193030FC005ADF5D /* ReadMe.txt */; };
+		D7919A841A22BFF000A8D012 /* AAPL_8or7_EmailPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7919A811A22B7CD00A8D012 /* AAPL_8or7_EmailPickerViewController.swift */; };
+		D7919A861A22C00500A8D012 /* AAPL_8or7_PersonPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7919A851A22C00500A8D012 /* AAPL_8or7_PersonPickerViewController.swift */; };
+		D7919A881A22C2CB00A8D012 /* AAPLEmailPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7919A871A22C2CB00A8D012 /* AAPLEmailPickerViewController.swift */; };
+		D7919A8A1A22C88900A8D012 /* AAPLPersonPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7919A891A22C88900A8D012 /* AAPLPersonPickerViewController.swift */; };
+		D7919A8D1A22CB8900A8D012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7919A8C1A22CB8900A8D012 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32B806C3192EA292005ADF5D /* PeoplePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeoplePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B806C7192EA292005ADF5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B806C8192EA292005ADF5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32B806CA192EA292005ADF5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		32B806CC192EA292005ADF5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		32B806CE192EA292005ADF5D /* AAPLPersonPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLPersonPickerViewController.h; sourceTree = "<group>"; };
+		32B806D0192EA292005ADF5D /* AAPLPersonPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLPersonPickerViewController.m; sourceTree = "<group>"; };
+		32B806D7192EA292005ADF5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		32B806DC192EA292005ADF5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		32B806F3192EC812005ADF5D /* AAPLEmailPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLEmailPickerViewController.h; sourceTree = "<group>"; };
+		32B806F4192EC812005ADF5D /* AAPLEmailPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLEmailPickerViewController.m; sourceTree = "<group>"; };
+		32B806F7192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPL_8or7_EmailPickerViewController.h; sourceTree = "<group>"; };
+		32B806F8192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPL_8or7_EmailPickerViewController.m; sourceTree = "<group>"; };
+		32B806F9192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPL_8or7_PersonPickerViewController.h; sourceTree = "<group>"; };
+		32B806FA192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPL_8or7_PersonPickerViewController.m; sourceTree = "<group>"; };
+		32B806FF193030FC005ADF5D /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		D78986051BAE66BB00572983 /* README2.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README2.md; sourceTree = "<group>"; };
+		D7919A801A22B7CC00A8D012 /* PeoplePicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeoplePicker-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7919A811A22B7CD00A8D012 /* AAPL_8or7_EmailPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPL_8or7_EmailPickerViewController.swift; sourceTree = "<group>"; };
+		D7919A851A22C00500A8D012 /* AAPL_8or7_PersonPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPL_8or7_PersonPickerViewController.swift; sourceTree = "<group>"; };
+		D7919A871A22C2CB00A8D012 /* AAPLEmailPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLEmailPickerViewController.swift; sourceTree = "<group>"; };
+		D7919A891A22C88900A8D012 /* AAPLPersonPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLPersonPickerViewController.swift; sourceTree = "<group>"; };
+		D7919A8C1A22CB8900A8D012 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7E715331A88ECE10075D20E /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		D7E715341A88ECE10075D20E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32B806BF192EA292005ADF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32B806B9192EA292005ADF5D = {
+			isa = PBXGroup;
+			children = (
+				D7E715331A88ECE10075D20E /* LICENSE.txt */,
+				D7E715341A88ECE10075D20E /* README.md */,
+				D78986051BAE66BB00572983 /* README2.md */,
+				32B806FF193030FC005ADF5D /* ReadMe.txt */,
+				32B806C5192EA292005ADF5D /* PeoplePicker */,
+				32B806C4192EA292005ADF5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32B806C4192EA292005ADF5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32B806C3192EA292005ADF5D /* PeoplePicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32B806C5192EA292005ADF5D /* PeoplePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D7919A8B1A22CADB00A8D012 /* Unused */,
+				D7919A8C1A22CB8900A8D012 /* AppDelegate.swift */,
+				D7919A891A22C88900A8D012 /* AAPLPersonPickerViewController.swift */,
+				D7919A871A22C2CB00A8D012 /* AAPLEmailPickerViewController.swift */,
+				D7919A851A22C00500A8D012 /* AAPL_8or7_PersonPickerViewController.swift */,
+				D7919A811A22B7CD00A8D012 /* AAPL_8or7_EmailPickerViewController.swift */,
+				32B806D6192EA292005ADF5D /* Main_iPhone.storyboard */,
+				32B806DC192EA292005ADF5D /* Images.xcassets */,
+				32B806C6192EA292005ADF5D /* Supporting Files */,
+			);
+			path = PeoplePicker;
+			sourceTree = "<group>";
+		};
+		32B806C6192EA292005ADF5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32B806C7192EA292005ADF5D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7919A8B1A22CADB00A8D012 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				32B806CA192EA292005ADF5D /* AppDelegate.h */,
+				32B806CC192EA292005ADF5D /* AppDelegate.m */,
+				32B806CE192EA292005ADF5D /* AAPLPersonPickerViewController.h */,
+				32B806D0192EA292005ADF5D /* AAPLPersonPickerViewController.m */,
+				32B806F3192EC812005ADF5D /* AAPLEmailPickerViewController.h */,
+				32B806F4192EC812005ADF5D /* AAPLEmailPickerViewController.m */,
+				32B806F9192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.h */,
+				32B806FA192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.m */,
+				32B806F7192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.h */,
+				32B806F8192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.m */,
+				32B806C8192EA292005ADF5D /* main.m */,
+				D7919A801A22B7CC00A8D012 /* PeoplePicker-Bridging-Header.h */,
+			);
+			name = Unused;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32B806C0192EA292005ADF5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B806CF192EA292005ADF5D /* AAPLPersonPickerViewController.h in Headers */,
+				32B806FD192FE1C6005ADF5D /* AAPL_8or7_PersonPickerViewController.h in Headers */,
+				32B806CB192EA292005ADF5D /* AppDelegate.h in Headers */,
+				32B806F5192EC812005ADF5D /* AAPLEmailPickerViewController.h in Headers */,
+				32B806FB192FE1C6005ADF5D /* AAPL_8or7_EmailPickerViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		32B806C2192EA292005ADF5D /* PeoplePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32B806EC192EA292005ADF5D /* Build configuration list for PBXNativeTarget "PeoplePicker" */;
+			buildPhases = (
+				32B806BE192EA292005ADF5D /* Sources */,
+				32B806BF192EA292005ADF5D /* Frameworks */,
+				32B806C0192EA292005ADF5D /* Headers */,
+				32B806C1192EA292005ADF5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PeoplePicker;
+			productName = PeoplePicker;
+			productReference = 32B806C3192EA292005ADF5D /* PeoplePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32B806BA192EA292005ADF5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Apple Inc";
+			};
+			buildConfigurationList = 32B806BD192EA292005ADF5D /* Build configuration list for PBXProject "PeoplePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32B806B9192EA292005ADF5D;
+			productRefGroup = 32B806C4192EA292005ADF5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32B806C2192EA292005ADF5D /* PeoplePicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32B806C1192EA292005ADF5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B806DD192EA292005ADF5D /* Images.xcassets in Resources */,
+				32B80700193030FC005ADF5D /* ReadMe.txt in Resources */,
+				32B806D8192EA292005ADF5D /* Main_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32B806BE192EA292005ADF5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7919A881A22C2CB00A8D012 /* AAPLEmailPickerViewController.swift in Sources */,
+				D7919A8A1A22C88900A8D012 /* AAPLPersonPickerViewController.swift in Sources */,
+				D7919A8D1A22CB8900A8D012 /* AppDelegate.swift in Sources */,
+				D7919A841A22BFF000A8D012 /* AAPL_8or7_EmailPickerViewController.swift in Sources */,
+				D7919A861A22C00500A8D012 /* AAPL_8or7_PersonPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		32B806D6192EA292005ADF5D /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32B806D7192EA292005ADF5D /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32B806EA192EA292005ADF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				AXLE_ENABLE_DEBUG_INFO = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32B806EB192EA292005ADF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				AXLE_ENABLE_DEBUG_INFO = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32B806ED192EA292005ADF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PeoplePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeoplePicker/PeoplePicker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		32B806EE192EA292005ADF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PeoplePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeoplePicker/PeoplePicker-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32B806BD192EA292005ADF5D /* Build configuration list for PBXProject "PeoplePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32B806EA192EA292005ADF5D /* Debug */,
+				32B806EB192EA292005ADF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32B806EC192EA292005ADF5D /* Build configuration list for PBXNativeTarget "PeoplePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32B806ED192EA292005ADF5D /* Debug */,
+				32B806EE192EA292005ADF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32B806BA192EA292005ADF5D /* Project object */;
+}
