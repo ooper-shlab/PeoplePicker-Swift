@@ -27,12 +27,12 @@ class PersonPickerViewController: UIViewController, ABPeoplePickerNavigationCont
     @IBOutlet weak var resultLabel: UILabel!
     
     
-    @IBAction func showPicker(AnyObject) {
+    @IBAction func showPicker(_: AnyObject) {
         // This example is to be run on iOS 8.0.
-        if !self.isRunningOn8 {
+        guard #available(iOS 8.0, *) else {
+            showVersionAlert()
             return
         }
-        
         let picker = ABPeoplePickerNavigationController()
         picker.peoplePickerDelegate = self
         
@@ -43,7 +43,7 @@ class PersonPickerViewController: UIViewController, ABPeoplePickerNavigationCont
     //#MARK: ABPeoplePickerNavigationControllerDelegate methods
     
     // A selected person is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson person: ABRecord!) {
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
         var contactName = ABRecordCopyCompositeName(person)?.takeRetainedValue() as String?
         contactName = contactName ?? "No Name"
         self.resultLabel.text = "Picked \(contactName!)"
@@ -51,21 +51,15 @@ class PersonPickerViewController: UIViewController, ABPeoplePickerNavigationCont
     
     
     // Implement this if you want to do additional work when the picker is cancelled by the user. This method may be optional in a future iOS 8.0 seed.
-    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController!) {
+    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController) {
     }
     
     
     //#MARK: helper methods
     
-    private var isRunningOn8: Bool {
-        var result = true
-        let systemVersion = UIDevice.currentDevice().systemVersion
-        if systemVersion.compare("8.0", options: .NumericSearch) == .OrderedAscending {
-            result = false
-            let alertView = UIAlertView(title: "Error", message: "This picker sample can only run\non iOS 8 or later.", delegate: nil, cancelButtonTitle: "OK")
-            alertView.show()
-        }
-        return result
+    private func showVersionAlert() {
+        let alertView = UIAlertView(title: "Error", message: "This picker sample can only run\non iOS 8 or later.", delegate: nil, cancelButtonTitle: "OK")
+        alertView.show()
     }
     
 }

@@ -27,9 +27,10 @@ class EmailPickerViewController: UIViewController, ABPeoplePickerNavigationContr
     @IBOutlet weak var resultLabel: UILabel!
     
     
-    @IBAction func showPicker(AnyObject) {
+    @IBAction func showPicker(_: AnyObject) {
         // This example is to be run on iOS 8.0.
-        if !self.isRunningOn8 {
+        guard #available(iOS 8.0, *) else {
+            showVersionAlert()
             return
         }
         
@@ -53,19 +54,19 @@ class EmailPickerViewController: UIViewController, ABPeoplePickerNavigationContr
     //#MARK: ABPeoplePickerNavigationControllerDelegate methods
     
     // A selected person is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson person: ABRecord!) {
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
         self.didSelectPerson(person, identifier: kABMultiValueInvalidIdentifier)
     }
     
     
     // A selected person and property is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson person: ABRecord!, property: ABPropertyID, identifier: ABMultiValueIdentifier) {
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord, property: ABPropertyID, identifier: ABMultiValueIdentifier) {
         self.didSelectPerson(person, identifier: identifier)
     }
     
     
     // Implement this if you want to do additional work when the picker is cancelled by the user. This method may be optional in a future iOS 8.0 seed.
-    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController!) {
+    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController) {
     }
     
     
@@ -87,15 +88,9 @@ class EmailPickerViewController: UIViewController, ABPeoplePickerNavigationContr
     }
     
     
-    private var isRunningOn8: Bool {
-        var result = true
-        let systemVersion = UIDevice.currentDevice().systemVersion
-        if systemVersion.compare("8.0", options: .NumericSearch) == .OrderedAscending {
-            result = false
-            let alertView = UIAlertView(title: "Error", message: "This picker sample can only run\non iOS 8 or later.", delegate: nil, cancelButtonTitle: "OK")
-            alertView.show()
-        }
-        return result
+    private func showVersionAlert() {
+        let alertView = UIAlertView(title: "Error", message: "This picker sample can only run\non iOS 8 or later.", delegate: nil, cancelButtonTitle: "OK")
+        alertView.show()
     }
     
 }

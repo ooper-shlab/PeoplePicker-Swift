@@ -27,7 +27,7 @@ class AAPL_8or7_PersonPickerViewController: UIViewController, ABPeoplePickerNavi
     @IBOutlet private weak var resultLabel: UILabel!
     
     
-    @IBAction func showPicker(AnyObject) {
+    @IBAction func showPicker(_: AnyObject) {
         let picker = ABPeoplePickerNavigationController()
         picker.peoplePickerDelegate = self
         
@@ -38,13 +38,13 @@ class AAPL_8or7_PersonPickerViewController: UIViewController, ABPeoplePickerNavi
     //#MARK: ABPeoplePickerNavigationControllerDelegate methods
     
     // On iOS 8.0, a selected person is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson person: ABRecord!) {
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
         self.didSelectPerson(person)
     }
     
     
     // On iOS 7.x or earlier, a selected person is returned with this method. This method may be deprecated in a future iOS 8.0 seed.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, shouldContinueAfterSelectingPerson person: ABRecord!) -> Bool {
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, shouldContinueAfterSelectingPerson person: ABRecord) -> Bool {
         self.didSelectPerson(person)
         
         peoplePicker.dismissViewControllerAnimated(true, completion: nil)
@@ -53,13 +53,13 @@ class AAPL_8or7_PersonPickerViewController: UIViewController, ABPeoplePickerNavi
     
     
     // On iOS 7.x or earlier, this method is required but never used by this sample. This method may be deprecated in a future iOS 8.0 seed.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, shouldContinueAfterSelectingPerson person: ABRecord!, property: ABPropertyID, identifier: ABMultiValueIdentifier) -> Bool {
+    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, shouldContinueAfterSelectingPerson person: ABRecord, property: ABPropertyID, identifier: ABMultiValueIdentifier) -> Bool {
         return false
     }
     
     
     // On iOS 7.x or earlier, this method is required and it must dismiss the picker. This method may be optional in a future iOS 8.0 seed.
-    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController!) {
+    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController) {
         // Perform any additional work when the picker is cancelled by the user.
         
         peoplePicker.dismissViewControllerAnimated(true, completion: nil)
