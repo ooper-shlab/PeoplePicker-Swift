@@ -38,7 +38,7 @@ class EmailPickerViewController: UIViewController, ABPeoplePickerNavigationContr
         picker.peoplePickerDelegate = self
         
         // The people picker will only display the person's name, image and email properties in ABPersonViewController.
-        picker.displayedProperties = [NSNumber(int: kABPersonEmailProperty)]
+        picker.displayedProperties = [kABPersonEmailProperty as NSNumber]
         
         // The people picker will enable selection of persons that have at least one email address.
         picker.predicateForEnablingPerson = NSPredicate(format: "emailAddresses.@count > 0")
@@ -47,34 +47,34 @@ class EmailPickerViewController: UIViewController, ABPeoplePickerNavigationContr
         // otherwise the people picker will present an ABPersonViewController for the user to pick one of the email addresses.
         picker.predicateForSelectionOfPerson = NSPredicate(format: "emailAddresses.@count = 1")
         
-        self.presentViewController(picker, animated: true, completion: nil)
+        self.present(picker, animated: true, completion: nil)
     }
     
     
     //#MARK: ABPeoplePickerNavigationControllerDelegate methods
     
     // A selected person is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
+    func peoplePickerNavigationController(_ peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
         self.didSelectPerson(person, identifier: kABMultiValueInvalidIdentifier)
     }
     
     
     // A selected person and property is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord, property: ABPropertyID, identifier: ABMultiValueIdentifier) {
+    func peoplePickerNavigationController(_ peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord, property: ABPropertyID, identifier: ABMultiValueIdentifier) {
         self.didSelectPerson(person, identifier: identifier)
     }
     
     
     // Implement this if you want to do additional work when the picker is cancelled by the user. This method may be optional in a future iOS 8.0 seed.
-    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController) {
+    func peoplePickerNavigationControllerDidCancel(_ peoplePicker: ABPeoplePickerNavigationController) {
     }
     
     
     //#MARK: helper methods
     
-    private func didSelectPerson(person: ABRecordRef, identifier: ABMultiValueIdentifier) {
+    private func didSelectPerson(_ person: ABRecord, identifier: ABMultiValueIdentifier) {
         var emailAddress = "no email address"
-        if let emails: ABMultiValueRef = ABRecordCopyValue(person, kABPersonEmailProperty)?.takeRetainedValue() as ABMultiValueRef? {
+        if let emails: ABMultiValue = ABRecordCopyValue(person, kABPersonEmailProperty)?.takeRetainedValue() as ABMultiValue? {
             if ABMultiValueGetCount(emails) > 0 {
                 var index: CFIndex = 0
                 if identifier != kABMultiValueInvalidIdentifier {

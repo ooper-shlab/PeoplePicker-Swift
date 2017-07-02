@@ -36,14 +36,14 @@ class PersonPickerViewController: UIViewController, ABPeoplePickerNavigationCont
         let picker = ABPeoplePickerNavigationController()
         picker.peoplePickerDelegate = self
         
-        self.presentViewController(picker, animated: true, completion: nil)
+        self.present(picker, animated: true, completion: nil)
     }
     
     
     //#MARK: ABPeoplePickerNavigationControllerDelegate methods
     
     // A selected person is returned with this method.
-    func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
+    func peoplePickerNavigationController(_ peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
         var contactName = ABRecordCopyCompositeName(person)?.takeRetainedValue() as String?
         contactName = contactName ?? "No Name"
         self.resultLabel.text = "Picked \(contactName!)"
@@ -51,7 +51,7 @@ class PersonPickerViewController: UIViewController, ABPeoplePickerNavigationCont
     
     
     // Implement this if you want to do additional work when the picker is cancelled by the user. This method may be optional in a future iOS 8.0 seed.
-    func peoplePickerNavigationControllerDidCancel(peoplePicker: ABPeoplePickerNavigationController) {
+    func peoplePickerNavigationControllerDidCancel(_ peoplePicker: ABPeoplePickerNavigationController) {
     }
     
     
